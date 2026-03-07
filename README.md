@@ -1,6 +1,6 @@
 # Colors.Dev
 
-[![Version](https://img.shields.io/badge/version-6.3.4.1749-blue.svg)](https://github.com/colors-dev/Colors.Dev)
+[![Version](https://img.shields.io/badge/version-6.3.7.0201-blue.svg)](https://github.com/colors-dev/Colors.Dev)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/colors-dev/Colors.Dev/blob/master/LICENSE.md)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-purple.svg)<br/>
 ![Dependencies](https://img.shields.io/badge/dependencies-none-purple)
@@ -254,7 +254,7 @@ ClearBuffer();
 
 See the full C console demo in [`DemoConsole/main.c`](https://github.com/colors-dev/Colors.Dev/blob/master/DemoConsole/main.c):
 ```C
-#include "chizl_colors.h"
+#include "color_types.h"
 const RgbColor rgbCyan = { 255, 0, 255, 255 }; 
 const RgbColor rgbBlack = { 255, 0, 0, 0 };
 
@@ -370,7 +370,10 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Version History
 
-- **6.3.4.1749** - Current release
+- **6.3.7.0201** - Current release
+  - Moved from Chizl.Colors to Colors.Dev to create a more focused library for color manipulation and console color support.  This allows for a more streamlined API and clearer branding for developers looking for a dedicated color library without the additional features of the broader Colors.Dev framework.
+
+- **6.3.4.1749**
   - Missed the RgbToLab conversion in the previous update, so added that in this version to ensure full RGB to Lab support.  This allows developers to easily convert RGB colors to Lab for tasks like color grading, palette generation, and advanced color manipulation while maintaining the existing RGB, HSV, HSL, CMYK, XYZ, LCH, and LUV conversions.
 
 - **6.3.4.0543**
