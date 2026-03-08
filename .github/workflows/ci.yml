@@ -30,19 +30,10 @@ jobs:
       - name: Setup .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: "8.0.x"
 
       - name: Restore
         run: msbuild Colors.Dev.sln /t:Restore /p:Configuration=${{ matrix.configuration }} /p:Platform=${{ matrix.platform }}
 
       - name: Build
         run: msbuild Colors.Dev.sln /m /p:Configuration=${{ matrix.configuration }} /p:Platform=${{ matrix.platform }}
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: Colors.Dev-${{ matrix.configuration }}-${{ matrix.platform }}
-          path: |
-            **/bin/${{ matrix.platform }}/${{ matrix.configuration }}/**
-            **/${{ matrix.platform }}/${{ matrix.configuration }}/**
-          if-no-files-found: warn
